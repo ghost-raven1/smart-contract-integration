@@ -2,29 +2,22 @@
   <div class="primary">
     <div class="primary__template template">
       <div class="template__header">
-        <Header />
+        <TheHeader />
       </div>
       <div class="template__content">
         <div class="template__container">
-          <nuxt />
+          <Nuxt />
         </div>
-      </div>
-      <div class="template__footer">
-        <Footer />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Footer from '~/components/Footer'
-import Header from '~/components/Header'
+
 export default {
   name: 'Default',
-  components: {
-    Header,
-    Footer
-  }
+  components: {}
 }
 </script>
 
@@ -32,6 +25,7 @@ export default {
 .primary {
   height: 100vh;
   overflow-y: auto;
+  width: 100%;
   &__template {
     height: 60px;
     display: grid;
@@ -56,10 +50,8 @@ export default {
     margin: 0 auto;
   }
   &__header {
-    height: 100%;
-  }
-  &__footer {
-    height: 100%;
+    height: 80px;
+    width: 100%;
   }
 }
 </style>
