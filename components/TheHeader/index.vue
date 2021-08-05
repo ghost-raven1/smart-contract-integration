@@ -30,10 +30,10 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  height: 59px;
+  height: 67px;
   width: 100%;
   display: flex;
-  background: white;
+  background: #3C3C3C;
   box-shadow: 1px 1px 2px 0 #8d8d8d;
   z-index: 1;
   justify-content: center;
@@ -49,7 +49,7 @@ export default {
     margin: -5px 0px 5px 0;
   }
   &__container {
-    padding: 4px;
+    padding: 10px;
     width: 1180px;
     display: flex;
     align-items: center;

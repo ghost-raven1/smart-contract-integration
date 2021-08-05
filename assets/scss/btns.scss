@@ -1,6 +1,6 @@
 .btn {
   &__connect {
-    background: linear-gradient(253.94deg, #09F2C3 8.37%, #15DCE4 69.71%);
+    background: linear-gradient(253.94deg, #c0c7c6 30.29%, #858d8d 69.71%);
     border-radius: 14px;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,34 @@
     border: none;
     color: white;
     margin: 7px 0 0 0;
-    cursor: pointer;
+    transition: 1s;
+    &:hover {
+      background: linear-gradient(253.94deg, #09F2C3 30.29%, #15DCE4 69.71%) no-repeat;
+      color: #585858;
+      cursor: pointer;
+    }
+  }
+  &__allowance {
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: inherit;
+    padding: 1rem 2rem;
+    border: none;
+    transition: 1s;
+    border-radius: 14px;
+    background: linear-gradient(253.94deg, #474747 30.29%, #5a5a5a 69.71%);
+    &:hover {
+      background: linear-gradient(253.94deg, #09F2C3 30.29%, #15DCE4 69.71%) no-repeat;
+      color: #585858;
+      cursor: pointer;
+    }
+  }
+  &__approve {
+    @extend .btn__allowance;
+  }
+  &__transfer {
+    @extend .btn__allowance;
   }
 }
