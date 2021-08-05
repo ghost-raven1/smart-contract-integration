@@ -37,6 +37,22 @@
             Amount
           </label>
           <input id="amount" type="number" class="amount__input" placeholder="Amount">
+          <div class="dd">
+            <button class="dd__btn" @click="toggleDD">
+              DND
+            </button>
+          </div>
+          <div class="dd__list" :class="{'hide': !isOpenDD}">
+            <div class="dd__item">
+              DND
+            </div>
+            <div class="dd__item">
+              DND
+            </div>
+            <div class="dd__item">
+              DND
+            </div>
+          </div>
         </div>
         <div class="address">
           <label class="address__label" for="address">
@@ -65,6 +81,7 @@ export default {
   layout: 'default',
   data () {
     return {
+      isOpenDD: false,
       code: '',
       wallets: [
         {
@@ -79,11 +96,62 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    toggleDD () {
+      this.isOpenDD = !this.isOpenDD
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.dd {
+  position: absolute;
+  right: calc(17vw + 17px);
+  bottom: calc(13vw + 10px);
+  &__btn {
+    padding: 15px 25px;
+    max-width: 142px;
+    width: 100%;
+    max-height: 52px;
+    height: 100%;
+    background: #747474;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+  }
+  &__list {
+    background: #747474;
+    max-width: 142px;
+    width: 100%;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    position: absolute;
+    right: calc(16vw + 23px);
+    bottom: calc(18vw + 10px);
+  }
+  &__item {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    max-width: 142px;
+    width: 100%;
+    max-height: 52px;
+    height: 100%;
+    color: #fff;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+  }
+}
+
+.hide {
+  display: none;
+}
 
 .wallets {
   height: 100px;
