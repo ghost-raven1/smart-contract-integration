@@ -42,17 +42,14 @@
               DND
             </button>
           </div>
-          <div class="dd__list" :class="{'hide': !isOpenDD}">
-            <div class="dd__item">
+          <span class="dd__list" :class="{'hide': !isOpenDD}">
+            <span class="dd__item">
               DND
-            </div>
-            <div class="dd__item">
+            </span>
+            <span class="dd__item">
               DND
-            </div>
-            <div class="dd__item">
-              DND
-            </div>
-          </div>
+            </span>
+          </span>
         </div>
         <div class="address">
           <label class="address__label" for="address">
@@ -108,9 +105,9 @@ export default {
 <style lang="scss" scoped>
 
 .dd {
-  position: absolute;
-  right: calc(17vw + 17px);
-  bottom: calc(13vw + 10px);
+  position: relative;
+  left: calc(46vw + 175px);
+  bottom: calc(3vw + 10px);
   &__btn {
     padding: 15px 25px;
     max-width: 142px;
@@ -126,14 +123,18 @@ export default {
     font-size: 16px;
   }
   &__list {
+    position: absolute;
+    bottom: calc(610px + 5px);
+    min-width: 86px;
+    z-index: 10000000;
+    display: flex;
+    flex-direction: column;
     background: #747474;
     max-width: 142px;
     width: 100%;
     margin: 10px 0 0 0;
     border-radius: 10px;
-    position: absolute;
-    right: calc(16vw + 23px);
-    bottom: calc(18vw + 10px);
+    left: calc(60vw + 240px);
   }
   &__item {
     padding: 10px 0 10px 0;
@@ -226,7 +227,7 @@ export default {
 .address {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   &__label {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
